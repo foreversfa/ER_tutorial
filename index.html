@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ER Tutorial</title>
+    <!--this is js and css main file-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- this is jquery and bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- this is shortcut icon -->
+    <link rel="shortcut icon" href="img/ericon.png">
+</head>
+
+<body>
+    <!-- this is navigation bar and heading images -->
+    <div class="header">
+        <div class="heading">
+            <div class="container-fluid my-container">
+                <div class="row nav-div">
+                    <div class="col-sm-4 col-xs-12 titlename"><a href="index.html">ER Tutorial</a></div>
+                    <div class="col-sm-offset-1 col-sm-7 col-md-offset-2 col-md-6">
+                        <!-- <ul class="nav nav-pills nav-justified">
+                        <li role="presentation" class="navlist"><a href="#">Vocabulary</a></li>
+                        <li role="presentation" class="navlist"><a href="#">To do list</a></li>
+                    </ul> -->
+                        <ul class="navul">
+                            <a href="vocab.html">
+                                <li class="navlist"><strong>Vocabulary</strong></li>
+                            </a>
+                            <a href="match.html">
+                                <li class="navlist"><strong>Match practice</strong></li>
+                            </a>
+                            <a href="todolist.html">
+                                <li class="navlist"><strong>To do list</strong></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- this part is slide -->
+        <div class="wrapper">
+            <div class="carousel">
+                <div class="inner">
+                    <div class="slide active">
+                        <div class="textbox">
+                            <h2>When you imagine Emergency Room is something like this...</h2></div>
+                        <div id="textbox-bg1"></div>
+                    </div>
+                    <div class="slide">
+                        <div class="textbox">
+                            <h2>It's actually more like this</h2></div>
+                        <div id="textbox-bg2"></div>
+                    </div>
+                    <div class="slide">
+                        <div class="textbox">
+                            <h2>Crowded, Panic, and Full of Depression</h2></div>
+                        <div id="textbox-bg3"></div>
+                    </div>
+                </div>
+                <div class="arrow arrow-left"></div>
+                <div class="arrow arrow-right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="supporting">
+        <div class="container-fluid">
+            <h2>Coming to ER at bad time could cause you...</h2>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-2"><img src="img/money.png" alt="wasteofmoney"></div>
+                <div class="col-sm-offset-2 col-sm-4">
+                    <p><strong>A lot of money</strong>. Emergency service is probably one of the most expensive service in the United States. Just sign in and let doctor to check if you catch any problem could cause $1000, let along taking ambulance to the ER. In many cases ER cost is covered by your insurance, but sometimes it isn't. You have to make sure you come to ER in a REAL emergency situation </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-2"><img src="img/clock.png" alt="wasteoftime"></div>
+                <div class="col-sm-offset-2 col-sm-4">
+                    <p><strong>A huge amount of time</strong>. Emergency room will be crowded, especially in a city like New York. If you come in a not-so-much emergency situation, you are very likely sitting there for three or four hours before you get treated. This will not be an interesting experience at all. Crowding into a 300 square feet room, smelling the odour of disinfectant, hearing the crying and moaning from people around, how do you feel like that?</p>
+                </div>
+            </div>
+            <h2>This site is to help you avoid "bad" time.</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="teaching">
+        <div class="triage">
+            <div class="container">
+                <h2>The first thing you need to know is "triage" system</h2>
+                <p>By definition, triage refers to the assignment of degrees of urgency to wounds or illnesses to decide the order of treatment of a large number of patients or casualties. Every patients coming to ER will be assigned a level of emergency</p>
+                <br>
+                <p>Triage is easy to understand. Patients who have heart attacks need to be treated before those who have toothache, and those who have appendicitis need to be treated before those who have stomachache.</p>
+                <br>
+                <p>Different countries have different triage systems. In the United States, triage system is represented by color tag. Green tag represented "Minimal". This category of patients are also known as "walking wounded" or "uninjured". As name suggested, this category designates to those who have minor medical problems. Green tag patients do not need immediate medical care, so they will be treated after other categories. Yellow tag represents "injured". Yellow individuals require medical attention but it is not needed immediately. Individuals in this category may have cuts, bruises, lacerations, some confusion, or minor fractures. The most severe category is red tag. Red tag represents "immediate". As name suggested, the red patients need immediate medical care, or they will die.</p>
+                <br>
+                <p>The chart below gives examples and evaluation parameters of each categories. As a normal person like you and me, knowing the triage system will help us know how serious our medical problems are, and how long we might wait before getting treated.</p>
+                <br>
+                <!-- Table -->
+                <table class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="warning" style="text-align:center">
+                            <th>Triage Tags</th>
+                            <th>Evaluation parameters</th>
+                            <th>Examples</th>
+                        </thead>
+                        <tr class="success">
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color:Green; color:black; font-size:100%; text-align:center;">&nbsp;</span> &nbsp;&nbsp;&nbsp;Minimal</td>
+                            <td>Generally stable and ambulatory (“walking wounded”) but may need some medical care. </td>
+                            <td>Rash, chronic headache, sprains, cold symptoms </td>
+                        </tr>
+                        <tr class="warning">
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color:Gold; color:black; font-size:100%; text-align:center;">&nbsp;</span>&nbsp;&nbsp;&nbsp;Injured</td>
+                            <td>The victim needs medical care within 2-4 hours. Injuries may become life-threatening if ignored, but can wait until Red tags are treated. </td>
+                            <td>Abdominal pain, non cardiac chest pain, multiple fractures, lacerations, renal calculi</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block; width:1.5em; height:1.5em; margin:1px 0; border:1px solid black; background-color:red; color:black; font-size:100%; text-align:center;">&nbsp;</span>Immediate</td>
+                            <td>The victim needs immediate medical care and will not survive if not treated quickly.</td>
+                            <td>Cardiopulmonary arrest, severe respiratory distress, major burns, major trauma, massive uncontrolled bleeding</td>
+                        </tr>
+                    </table>
+                </table>
+                <hr>
+            </div>
+        </div>
+        <div class="knowyourself">
+            <div class="container">
+                <h2>Then, you have to know your own conditions</h2>
+                <h3>About your health history</h3>
+                <p>No one can know you better than yourself. During a weekend or a holiday, when you get caught by some diseases, they are very likely your "old friends". Cold, fever, diarrhea, headache. Those are very common diseases that you can treat by yourself for one or two days. Instead of going to the emergency room and spending half of a day in waiting, just taking some over-the-counter pills can much release your pain and help you live through the weekends.</p>
+                <br>
+                <p>Besides the common diseases, some of you might have recuring health problems. For example, if you have history of gastric ulcer, prepare some medicines specifically dealing with acute stomachache. Don't wait until the moment you are in trouble.</p>
+                <br>
+                <h3>About your insurance</h3>
+                <p>According to American laws, ER will treat patients without considering the affordance. In another word, you don't need to pay anything at the time when you are taken care of by the ER. However, this is not to say that you are out of debt. After you get treated, hospital will send bills to your address. If you do not pay for the bills, that will affect your credit record, which in turn influences your life in the US, such as not being able to find job or getting finance from your bank. </p>
+                <br>
+                <p>Most people look for their insurance plan to cover their bills, but here is the trick part: you have to make sure what conditions (or more precisely, constraints) your insurance has set up for you. Insurance companies are profit making corporations. They will never write in the insurance plan: "we will cover anything for your emergency". One insurance plan must have specifics about what they will cover and what they will not. Your task is to find out those specifics and make sure that you are secured.</p>
+                <br>
+                <p>This is not to say that in a case not covered by insurance you will sit tight and do nothing. For one thing, your insurance plan usually covers most of possible situation for your emergency visits. Knowing your plan is just like a foresight; you know what you will pay for. For another thing, in the case not covered by insurance, you can make a decision whether it is worth to pay thousands of dollars visiting ER or to take some pills waiting until weekdays. The decision is on your hand.</p>
+                <br>
+                <p>Here is the <a href="http://www.netquote.com/health-insurance/news/coverage-for-emergency-care">external link </a> that teach you where you might find the information about ER visit rules and what else you need to consider.</p>
+                <hr>
+            </div>
+        </div>
+        <div class="gotoer">
+            <div class="container">
+                <h2>Last but not least, know how to go to ER</h2>
+                <p>Here are some possible ways for you to go to ER. Don't wait until emergency to think about these. Remeber them from now. </p>
+                <br>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-3">
+                        <!-- <object type="image/svg+xml" data="img/taxi.svg"></object> --><img src="img/taxi.svg" alt=""></div>
+                    <div class="col-sm-offset-1 col-sm-5">
+                        <p class="right">When you live by yourself, and you can still walk normally, call for a taxi. Install some taxi apps on your mobile phones, like Uber or Lyft. There will always be some cars around New York city 24/7. Before you call for a taxi, Google the address of the ER you want to go.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-1 col-sm-5">
+                        <p class="left">If you have some roomates and you get along well with them, don't hesitate to ask for help in an emergency situation! When you are in a state of pain, you will be very stressful, probably losing some normal abilities like moving and speaking. In that case, your friends can take you to the ER and help you talk to the nurses. Their existance can also support you mentally.</p>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-3"> <img src="img/friend.png" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-3"> <img src="img/ambulance.png" alt=""></div>
+                    <div class="col-sm-offset-1 col-sm-5">
+                        <p class="right">In a real urgent situation, don't forget 911. Call 911 and give your address, they will arrive at you as soon as possible. Ambulance will always take you to the nearest ER. Just remember that the cost of ambulance is REALLY high! You'd better have your insurance company pay for that</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="feedback">
+        <div class="container">
+            <h2>Now, it's time for you to do some excercises</h2>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-3">
+                    <a href="vocab.html">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"> <img src="img/book.png" alt=""></div>
+                                <div class="back">
+                                    <p>Vocab list of terminologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-offset-1 col-sm-3">
+                    <a href="match.html">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"> <img src="img/match.png" alt=""></div>
+                                <div class="back">
+                                    <p>Match symptom with triage </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-offset-1 col-sm-3">
+                    <a href="todolist.html">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"> <img src="img/list.png" alt=""></div>
+                                <div class="back">
+                                    <p>To do list to follow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="col-sm-offset-1 col-sm-3"> <img src="img/match.png" alt=""></div>
+                <div class="col-sm-offset-1 col-sm-3"> <img src="img/list.png" alt=""></div> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
