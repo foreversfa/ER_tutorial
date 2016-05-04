@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ER Tutorial</title>
+    <!--this is js and css main file-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- this is for partly print -->
+    <!-- <link rel="stylesheet" type="text/css" media="print" href="css/print.css" /> -->
+    <!-- this is jquery and bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- this is shortcut icon -->
+    <link rel="shortcut icon" href="img/ericon.png">
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/todo.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="container-fluid my-container">
+            <div class="row nav-div">
+                <div class="col-sm-4 col-xs-12 titlename"><a href="index.html">ER Tutorial</a></div>
+                <div class="col-sm-offset-1 col-sm-7 col-md-offset-2 col-md-6">
+                    <!-- <ul class="nav nav-pills nav-justified">
+                        <li role="presentation" class="navlist"><a href="#">Vocabulary</a></li>
+                        <li role="presentation" class="navlist"><a href="#">To do list</a></li>
+                    </ul> -->
+                    <ul class="navul"> 
+                        <a href="vocab.html">
+                            <li class="navlist"><strong>Vocabulary</strong></li>
+                        </a>
+                        <a href="match.html">
+                            <li class="navlist"><strong>Match practice</strong></li>
+                        </a>
+                        <a href="todolist.html">
+                            <li class="navlist"><strong>To do list</strong></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="todolist">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>This is the todo list for you</h2>
+                </div>
+                <div class="panel-body">
+                    <p>By filling out following questions, you can get a list of items that will help you know what you need to prepare for an emergency situation.</p>
+                    <hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5" style="margin-left:10px">
+                                <form name="f">
+                                    <!-- <label for="01">1. Do you have an insurance plan?</label>
+                        <div class="radio">
+                        <label><input type="radio" name="01" value="1">Yep for sure</label></div>
+                        <div class="radio">
+                        <label><input type="radio" name="01" value="0">Nope I don't have one</label></div> -->
+                                </form>
+                            </div>
+                            <div class="col-sm-4 printable" style="margin-left:80px" id="comment">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <p id="warning" style="margin-left:10px">*please fill out all the questions in order to obtain the full todo list.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

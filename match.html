@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ER Tutorial</title>
+    <!--this is js and css main file-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- this is jquery and bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js">
+    </script>
+    <!-- this is jquery ui -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <!-- this is bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- this is shortcut icon -->
+    <link rel="shortcut icon" href="img/ericon.png">
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/match.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="container-fluid my-container">
+            <div class="row nav-div">
+                <div class="col-sm-4 col-xs-12 titlename"><a href="index.html">ER Tutorial</a></div>
+                <div class="col-sm-offset-1 col-sm-7 col-md-offset-2 col-md-6">
+                    <!-- <ul class="nav nav-pills nav-justified">
+                        <li role="presentation" class="navlist"><a href="#">Vocabulary</a></li>
+                        <li role="presentation" class="navlist"><a href="#">To do list</a></li>
+                    </ul> -->
+                    <ul class="navul">
+                        <a href="vocab.html">
+                            <li class="navlist"><strong>Vocabulary</strong></li>
+                        </a>
+                        <a href="match.html">
+                            <li class="navlist"><strong>Match practice</strong></li>
+                        </a>
+                        <a href="todolist.html">
+                            <li class="navlist"><strong>To do list</strong></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+        <h1>Drag the symptoms into corresponding triage level.</h1>
+            <div class="row">
+                <div class="col-sm-3 drop" id="green"><h2 class="title">Minimal</h2><div class="dropArea"></div></div>
+                <div class="col-sm-3 drop" id="yellow"><h2 class="title">Injured</h2><div class="dropArea"></div></div>
+                <div class="col-sm-3 drop" id="red"><h2 class="title">Immediate</h2><div class="dropArea"></div></div>
+            </div>
+            <p style="text-align:right;margin-bottom:-20px;margin-right:80px"><span class="correct" style="border-radius:6px">&nbsp;Correct&nbsp;</span> <span class="false" style="border-radius:6px">&nbsp;Wrong&nbsp;</span></p>
+            <h2 class="title symptom" style="margin-bottom:-30px">Symptoms</h2>
+            <div class="wordlist">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

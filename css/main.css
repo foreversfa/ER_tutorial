@@ -1,0 +1,669 @@
+/*this is navigation part*/
+
+.nav-div {
+    padding: 10px;
+}
+
+.heading {
+    background-color: #efeaea;
+}
+
+.titlename {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #848484;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+    /*border:1px solid white;*/
+}
+
+.titlename a {
+    color: #848484;
+}
+
+.titlename a:hover {
+    text-decoration: none;
+    color: #848;
+}
+
+
+/*.container{
+	width:940px;
+}*/
+
+.navul {
+    list-style-type: none;
+    padding-top: 10px;
+    margin-left: 20pxu;
+}
+
+.navlist {
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    float: none;
+}
+
+.navlist:hover {
+    border: solid 2px white;
+}
+
+.navul a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+
+/*this is slide part*/
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    /*margin:5% auto 0;*/
+}
+
+
+/**
+ * Padding is set relative to the width
+ * of the element, so here padding-top:60% is
+ * a percentage of the width. This allows us 
+ * to set the height as a ratio of the width
+ *
+ */
+
+.carousel {
+    width: 100%;
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.textbox h2 {
+    font-size: 27px;
+    line-height: 170%;
+    margin: 0;
+    padding: 5px;
+}
+
+.textbox {
+    color: #efeaea;
+    background: rgba(34, 34, 34, 0.75);
+    position: relative;
+    left: 10%;
+    top: -50%;
+    width: 380px;
+    border-radius: 10px;
+    z-index: 100;
+    padding: 5px;
+}
+
+#textbox-bg1 {
+    color: #f2f2f2;
+    background: rgba(34, 34, 34, 0.7);
+    position: relative;
+    left: 10%;
+    top: -85%;
+    width: 380px;
+    height: 160px;
+    border-radius: 10px;
+    z-index: 99;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+#textbox-bg2 {
+    color: white;
+    background-position: center -70px;
+    background: rgba(34, 34, 34, 0.7);
+    position: relative;
+    left: 10%;
+    top: -65%;
+    width: 380px;
+    height: 80px;
+    border-radius: 10px;
+    z-index: 99;
+    filter: blur(10px);
+    -webkit-filter: blur(5px);
+}
+
+#textbox-bg3 {
+    color: white;
+    background-position: center -70px;
+    background: rgba(34, 34, 34, 0.7);
+    position: relative;
+    left: 10%;
+    top: -70%;
+    width: 380px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: 99;
+    filter: blur(10px);
+    -webkit-filter: blur(5px);
+}
+
+
+/**
+filter: blur(10px);
+	-webkit-filter: blur(10px); 
+ * ==========================
+ * Animation styles
+ * 
+ * Notes:
+ * 1. We use z-index to position active slides in-front 
+ * of non-active slides
+ * 2. We set right:0 and left:0 on .slide to provide us with
+ * a default positioning on both sides of the slide. This allows 
+ * us to trigger JS and CSS3 animations easily
+ *
+ */
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.slide.active,
+.slide.left,
+.slide.right {
+    z-index: 2;
+    opacity: 1;
+}
+
+
+/**
+ * ==========================
+ * JS animation styles
+ * 
+ * We use jQuery.animate to control the sliding animations
+ * when CSS3 animations are not available. In order for
+ * the next slide to slide in from the right, we need
+ * to change the left:0 property of the slide to left:auto
+ *
+ */
+
+.js-reset-left {
+    left: auto
+}
+
+
+/**
+ * ==========================
+ * CSS animation styles
+ * 
+ * .slide.left and .slide.right set-up
+ * the to-be-animated slide so that it can slide
+ * into view. For example, a slide that is about 
+ * to slide in from the right will:
+ * 1. Be positioned to the right of the viewport (right:-100%)
+ * 2. Slide in when the style is superseded with a more specific style (right:0%)
+ *
+ */
+
+.slide.left {
+    left: -100%;
+    right: 0;
+}
+
+.slide.right {
+    right: -100%;
+    left: auto;
+}
+
+.transition .slide.left {
+    left: 0%
+}
+
+.transition .slide.right {
+    right: 0%
+}
+
+
+/**
+ * The following classes slide the previously active
+ * slide out of view before positioning behind the 
+ * currently active slide
+ *
+ */
+
+.transition .slide.shift-right {
+    right: 100%;
+    left: auto
+}
+
+.transition .slide.shift-left {
+    left: 100%;
+    right: auto
+}
+
+
+/**
+ * This sets the CSS properties that will animate. We set the
+ * transition-duration property dynamically via JS.
+ * We use the browser's default transition-timing-function
+ * for simplicity's sake
+ * 
+ * It is important to note that we are using CodePen's inbuilt
+ * CSS3 property prefixer. For your own projects, you will need
+ * to prefix the transition and transform properties here to ensure
+ * reliable support across browsers
+ *
+ */
+
+.transition .slide {
+    transition-property: right, left, margin;
+}
+
+
+/**
+ * ==========================
+ * Indicators
+ *
+ */
+
+.indicators {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    padding: 0;
+    text-align: center;
+}
+
+.indicators li {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin: 5px;
+    background: #fff;
+    list-style-type: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-out;
+}
+
+.indicators li.active {
+    background: #93278f
+}
+
+.indicators li:hover {
+    background-color: #2b2b2b
+}
+
+
+/**
+ * ==========================
+ * Arrows 
+ *
+ */
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease-out;
+}
+
+.arrow:hover {
+    border-color: #93278f
+}
+
+.arrow-left {
+    left: 20px;
+    transform: rotate(225deg);
+}
+
+.arrow-right {
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+
+/**
+ * ==========================
+ * For demo purposes only
+ * 
+ * Please note that the styles below are used
+ * for the purposes of this demo only. There is no need
+ * to use these in any of your own projects
+ *
+ */
+
+.slide {
+    text-align: center;
+    padding-top: 25%;
+    background-size: cover;
+}
+
+
+/*h1{
+	width:100px;
+  height:100px;
+  background-color:rgba(146, 45, 141,0.7);
+	margin:auto;
+  line-height:100px;
+	color:#fff;
+	font-size:2.4em;
+  border-radius:50%;
+}*/
+
+.slide:nth-child(1) {
+    background-image: url(../img/er3.jpg);
+}
+
+.slide:nth-child(2) {
+    background-image: url(../img/er2.jpg);
+}
+
+.slide:nth-child(3) {
+    background-image: url(../img/er4.jpg);
+}
+
+
+/*this is supporting
+*/
+
+.supporting {
+    padding: 30px 30px 5px 30px;
+}
+
+.supporting img {
+    width: 100px;
+    margin: 130px 30px 30px 30px;
+    text-align: center;
+}
+
+.supporting h2 {
+    text-align: center;
+    margin: 30px;
+    font-size: 35px;
+}
+
+.supporting p {
+    font-size: 18px;
+    margin: 25px;
+    line-height: 150%
+}
+
+
+/*this is teaching section*/
+
+.teaching {
+    font-size: 18px;
+    line-height: 150%
+}
+
+.teaching h2 {
+    margin-bottom: 30px;
+}
+
+.teaching p {
+    line-height: 200%
+}
+
+.teacing table {
+    text-align: center;
+}
+
+.teaching .container {
+    padding: 0 90px;
+}
+
+.triage #minimal {
+    width: 30px;
+    color: yellow;
+}
+
+.gotoer img {
+    width: 120px;
+    margin: 80px 0px 0px 20px;
+}
+
+.gotoer .right,
+.left {
+    margin-bottom: 40px;
+}
+
+
+/*this is feedback section*/
+
+.feedback {
+    margin-bottom: 100px;
+}
+
+.feedback img {
+    width: 150px;
+    /*margin-top: 30px;*/
+}
+
+.feedback h2 {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+
+/*this is flip board code in feedback section*/
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000;
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flipper p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+/*this is todo list styles*/
+
+.todolist{
+	margin-top:40px;
+}
+/*change input text box length*/
+
+input[type="text"] {
+    width: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+/*this is button style*/
+
+#addButton {
+    border-radius: 20px;
+    background-color: rgba(204, 204, 204, 0.7);
+    border-color: white;
+    color: #ADAAAA;
+}
+
+#addButton:focus {
+    outline: 0;
+}
+
+
+/*this is comment background*/
+
+#comment {
+    background-color: #fffb99;
+    border-radius: 10px;
+}
+
+#comment p {
+    margin: 7px;
+}
+
+
+/*this is finish text*/
+
+.finish p {
+    margin-top: 400px;
+}
+
+
+
+
+/*this is style for vocubulary list*/
+
+#main{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+}
+
+td{
+	font-size:20px;
+}
+
+.table-div{
+	margin:20px 100px;
+}
+
+td.col-sm-3{
+	text-align: center;
+}
+
+/*this is style for mathing*/
+
+h1{
+    text-align: center;
+    font-size: 25px;
+}
+
+.title{
+    text-align: center;
+    font-size:20px;
+}
+
+.drop{
+    border:2px solid black;
+    /*margin:30px;*/
+    height:230px;
+    margin:40px;
+    border-radius: 10px
+
+}
+
+.dropArea{
+    height: 130px;
+}
+
+#green{
+    background-color: rgba(223, 240, 216,0.7);
+}
+
+#yellow{
+    background-color: rgba(252, 248, 227,0.7);
+}
+
+#red{
+    background-color: rgba(242, 222, 222,0.7);
+}
+
+.wordlist{
+    margin-top:40px;
+    border:2px solid black;
+    height:130px;
+    border-radius:10px;
+    background-color: rgba(239,234,234,0.7);
+}
+
+.words{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 3px 5px;
+    padding:5px;
+    display: inline-block;
+    box-shadow: 2px 2px 1px grey;
+}
+
+/*this is correct effect*/
+.correct{
+    background-color: #B8EAE9;
+}
+/*this is false effect*/
+.false{
+    background-color:#EF504D;
+}
+/*this is general style*/
+html,
+body {
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+}
